@@ -18,19 +18,23 @@
 
 ### 0. 메타
 
-- **Date**: YYYY-MM-DD
+- **Date**: 2025-11-27
 
-- **Author**: @github-id
+- **Author**: @hwicoding
 
-- **Branch / Ref**: e.g. `feature/auth`
+- **Branch / Ref**: `main`
 
-- **Related Issue / Ticket**: ref link or `N/A`
+- **Related Issue / Ticket**: N/A
 
 ### 1. 작업 요약
 
-- bullet 1
+- FVM을 사용하여 Flutter 3.38.3 (최신 stable) 버전으로 프로젝트 생성
 
-- bullet 2
+- 불필요한 플랫폼 폴더 삭제 (linux, macos, windows) - 웹/모바일 중심 프로젝트
+
+- FVM 설정 완료 (.fvm/fvm_config.json) 및 .gitignore 업데이트
+
+- 프로젝트 구조 확인 및 실행 가능 여부 검증 (flutter analyze 통과)
 
 ### 2. Troubleshooting & Decisions
 
@@ -38,17 +42,19 @@
 
 | --- | --- |
 
-| 이슈 | ... |
+| 이슈 | Flutter 프로젝트 초기화 및 안정적인 버전 관리 필요 |
 
-| 원인 분석 | ... |
+| 원인 분석 | FVM을 사용하여 프로젝트별 Flutter 버전 관리 필요, 최신 stable 버전(3.38.3) 사용 결정 |
 
-| 선택한 해결책 | ... |
+| 선택한 해결책 | FVM으로 Flutter 3.38.3 설치 및 프로젝트에 적용, 데스크톱 플랫폼 폴더 삭제로 프로젝트 구조 단순화 |
 
-| 영향 범위/추가 조치 | ... |
+| 영향 범위/추가 조치 | 웹/모바일(Android/iOS) 플랫폼만 유지, 향후 데스크톱 지원 불필요 판단 |
 
 ### 3. 다음 액션
 
-- [ ] TODO 1
+- [x] Flutter 프로젝트 초기 설정 진행
 
-- [ ] TODO 2
+- [ ] 의존성 설정 (Riverpod, Dio, go_router 등)
+
+- [ ] Clean Architecture 폴더 구조 생성
 

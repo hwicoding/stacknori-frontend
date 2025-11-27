@@ -28,6 +28,12 @@
 Thumbs.db # Windows hidden file
 
 # =======================================================
+# FVM (Flutter Version Management)
+# =======================================================
+.fvm/flutter_sdk
+.fvm/versions/
+
+# =======================================================
 # Dependencies and Generated Code
 # =======================================================
 # Generated localization files or configuration
