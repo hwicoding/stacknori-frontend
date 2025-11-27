@@ -18,21 +18,19 @@
 
 ### 0. 메타
 
-- **Date**: 2025-11-27
+- **Date**: YYYY-MM-DD
 
-- **Author**: @hwicoding
+- **Author**: @github-id
 
-- **Branch / Ref**: `main`
+- **Branch / Ref**: e.g. `feature/auth`
 
-- **Related Issue / Ticket**: N/A
+- **Related Issue / Ticket**: ref link or `N/A`
 
 ### 1. 작업 요약
 
-- DOC_LOG 자동화 설정 완료 (템플릿 파일, 스크립트, GitHub Actions 워크플로우 생성)
+- bullet 1
 
-- GitHub Secrets 설정 완료 (NOTION_API_KEY, NOTION_DATABASE_ID)
-
-- Notion 동기화 테스트 진행
+- bullet 2
 
 ### 2. Troubleshooting & Decisions
 
@@ -40,17 +38,17 @@
 
 | --- | --- |
 
-| 이슈 | 프론트엔드 레포지토리에 DOC_LOG 자동화 시스템 구축 필요 |
+| 이슈 | ... |
 
-| 원인 분석 | 백엔드와 동일한 시스템을 프론트엔드에도 적용하여 개발 일지 자동화 필요 |
+| 원인 분석 | ... |
 
-| 선택한 해결책 | 백엔드의 notion_sync.py 스크립트를 프론트엔드에 적용하고, GitHub Actions 워크플로우 설정 |
+| 선택한 해결책 | ... |
 
-| 영향 범위/추가 조치 | DOC_LOG.md 수정 시 자동으로 Notion에 페이지 생성 및 파일 초기화 |
+| 영향 범위/추가 조치 | ... |
 
 ### 3. 다음 액션
 
-- [x] Notion 동기화 테스트 결과 확인 (워크플로우 수동 실행 옵션 추가)
+- [ ] TODO 1
 
-- [ ] Flutter 프로젝트 초기 설정 진행
+- [ ] TODO 2
 
