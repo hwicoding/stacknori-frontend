@@ -18,19 +18,25 @@
 
 ### 0. 메타
 
-- **Date**: YYYY-MM-DD
+- **Date**: 2025-11-27
 
-- **Author**: @github-id
+- **Author**: @hwicoding
 
-- **Branch / Ref**: e.g. `feature/auth`
+- **Branch / Ref**: `main`
 
-- **Related Issue / Ticket**: ref link or `N/A`
+- **Related Issue / Ticket**: N/A
 
 ### 1. 작업 요약
 
-- bullet 1
+- 인증 관련 모델 및 Repository 구현 완료 (User, TokenPair, AuthRepository)
 
-- bullet 2
+- 로그인 화면 구현 완료 (이메일/비밀번호 입력, 유효성 검사, 에러 처리)
+
+- Bottom Navigation Bar 구조 설정 완료 (go_router 사용, 3개 탭: 로드맵, 자료 피드, 마이 페이지)
+
+- Riverpod AuthProvider 구현 및 인증 상태 관리
+
+- 로그인 성공 시 메인 화면 이동, 로그아웃 기능 구현
 
 ### 2. Troubleshooting & Decisions
 
@@ -38,17 +44,24 @@
 
 | --- | --- |
 
-| 이슈 | ... |
+| 이슈 | 인증 시스템 및 메인 화면 구조 구현 필요 |
 
-| 원인 분석 | ... |
+| 원인 분석 | 백엔드 API 구조 확인 결과 OAuth2PasswordRequestForm 사용, Clean Architecture 패턴에 맞춰 Domain/Data 계층 분리 필요 |
 
-| 선택한 해결책 | ... |
+| 선택한 해결책 | Domain 엔티티와 Data 모델 분리, Repository 패턴 적용, go_router의 StatefulShellRoute로 Bottom Navigation Bar 구현, Riverpod으로 인증 상태 관리 |
 
-| 영향 범위/추가 조치 | ... |
+| 영향 범위/추가 조치 | 로그인 화면부터 시작하여 인증된 사용자만 메인 화면 접근 가능하도록 구조 설계. 로드맵/자료 피드/마이 페이지는 기본 구조만 구현 (추후 상세 기능 추가 예정) |
 
 ### 3. 다음 액션
 
-- [ ] TODO 1
+- [x] 인증 관련 모델 및 Repository 구현
 
-- [ ] TODO 2
+- [x] 로그인 화면 구현
 
+- [x] Bottom Navigation Bar 구조 설정
+
+- [ ] 로드맵 화면 상세 구현
+
+- [ ] 자료 피드 화면 상세 구현
+
+- [ ] 마이 페이지 상세 구현
