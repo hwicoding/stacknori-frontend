@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'data/datasources/api_client.dart';
 
 void main() {
-  runApp(const MyApp());
+  // API 클라이언트 초기화
+  ApiClient.instance.init();
+
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
