@@ -18,19 +18,25 @@
 
 ### 0. 메타
 
-- **Date**: YYYY-MM-DD
+- **Date**: 2025-11-27
 
-- **Author**: @github-id
+- **Author**: @hwicoding
 
-- **Branch / Ref**: e.g. `feature/auth`
+- **Branch / Ref**: `main`
 
-- **Related Issue / Ticket**: ref link or `N/A`
+- **Related Issue / Ticket**: N/A
 
 ### 1. 작업 요약
 
-- bullet 1
+- Phase 1 프로젝트 기본 설정 완료
 
-- bullet 2
+- 의존성 설정: Riverpod, Dio, go_router, shared_preferences, freezed, widgetbook 등 추가
+
+- Clean Architecture 폴더 구조 생성 (core, domain, data, presentation)
+
+- API 클라이언트 설정 완료 (Dio 기반, JWT 토큰 자동 추가 인터셉터, 에러 핸들링)
+
+- Riverpod ProviderScope 설정 및 main.dart 업데이트
 
 ### 2. Troubleshooting & Decisions
 
@@ -38,17 +44,21 @@
 
 | --- | --- |
 
-| 이슈 | ... |
+| 이슈 | 프론트엔드 프로젝트 기본 인프라 구축 필요 (의존성, 아키텍처, API 클라이언트) |
 
-| 원인 분석 | ... |
+| 원인 분석 | Clean Architecture 패턴 적용 및 상태 관리(Riverpod), API 통신(Dio) 설정 필요 |
 
-| 선택한 해결책 | ... |
+| 선택한 해결책 | Clean Architecture 폴더 구조 생성, Dio 기반 API 클라이언트에 JWT 자동 갱신 인터셉터 구현, Riverpod ProviderScope 설정 |
 
-| 영향 범위/추가 조치 | ... |
+| 영향 범위/추가 조치 | 백엔드 API 확인 결과 인증 API만 구현됨, 로드맵/자료/진도 API는 추후 구현 예정. 현재는 인증 기능 중심으로 구조 설계 |
 
 ### 3. 다음 액션
 
-- [ ] TODO 1
+- [x] Phase 1 프로젝트 기본 설정 완료
 
-- [ ] TODO 2
+- [ ] 인증 관련 모델 및 Repository 구현
+
+- [ ] 로그인 화면 구현
+
+- [ ] Bottom Navigation Bar 구조 설정
 
