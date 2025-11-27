@@ -1,0 +1,50 @@
+name: Sync DOC_LOG to Notion
+
+permissions:
+  contents: write
+
+on:
+  push:
+    paths:
+      - "DOC_LOG.md"
+
+jobs:
+  sync-log:
+    runs-on: ubuntu-latest
+    env:
+      DOC_LOG_PATH: DOC_LOG.md
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install --upgrade pip requests
+
+      - name: Sync DOC_LOG to Notion
+        id: sync
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        run: python scripts/notion_sync.py
+
+      - name: Reset DOC_LOG.md
+        if: success() && steps.sync.outputs.sync_performed == 'true'
+        run: |
+          if [ -f DOC_LOG.template.md ]; then
+            cp DOC_LOG.template.md DOC_LOG.md
+          else
+            printf "## Stacknori DOC Log\n\n" > DOC_LOG.md
+          fi
+
+      - name: Commit cleared DOC_LOG.md
+        if: success() && steps.sync.outputs.sync_performed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: reset DOC_LOG after Notion sync"
+          file_pattern: DOC_LOG.md
+
